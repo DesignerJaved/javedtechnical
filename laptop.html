@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
+<style>
+  
+*{margin: 0; padding: 0; box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif; font-family: 'Poppins', sans-serif;}
+
+  a{ text-decoration: none; }
+  a:hover{ text-decoration: none; }
+  li{list-style: none;}
+
+  p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #606060;
+  }
+
+  .extra-div h2,  .servicediv h2{
+    font-size: 0.9rem;
+    margin: 20px 0 15px 0;
+    font-weight:bolder;
+    line-height: 1.1;
+    word-spacing:4px;
+  }
+
+  i{
+    color:#4d61f7;
+  }
+
+/***********Actual CSS Start*********/
+.header{
+  width:100%;
+  height:100vh;
+  background-image:linear-gradient(rgba(15,250,46,0.3), rgba(15,250,46,0.3 )),
+  url('imgs/bg3.jpg');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0 75%, 0 0);
+  position: relative;
+      }
+.header:before{
+  content:"";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  opacity: .7;
+  z-index: -1;
+  background: linear-gradient(to right, #1af70a 0%, #66f25c 0%, #04c21d 100%);
+}
+
+.navbar:before{
+  content:"";
+  position: absolute;
+  top: 0%;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  opacity: .3;
+  z-index: -1;
+  background: linear-gradient(to right, #1af70a 0%, #66f25c 0%, #04c21d 100%);
+}
+
+.nav-item a{
+
+  color: #fff!important;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
+}
+
+
+
+.header-section{
+  width: 100%;
+  height: inherit;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.center-div{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.header-buttons a{
+  border: 1px solid #fff;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 12px 35px;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.header-buttons a:hover{
+  font-weight: bold;
+  color: #50d1c0;
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.center-div p{
+           /*background-color:blue;*/
+  font-size: 1.3rem;
+  padding: 10px 0 20px 0;
+  color:white;
+}
+
+
+
+/********laptop************/ 
+.pric{
+  width:100%;
+  height: auto;
+  padding: 30px;
+  position: relative;
+}
+.pric h1{
+  color: red;
+}
+
+
+.pric:before{
+  content:"";
+  position: absolute;
+  top: 0%;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  opacity:;
+  z-index: -1;
+  /*background: linear-gradient(165deg, #16c9f6 55%, #fff 0%);*/
+}
+
+.cash{
+  font-size: 35px;
+  line-height: 1;
+  color: #606060;
+}
+
+.card{
+  margin: 20px 0px;
+  transition: 0.4s ease;
+  display: flex;
+}
+
+.card-header{
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: white;
+  padding: 25px 9!important;
+}
+
+.card-body{
+  margin: 0px 0px!important;
+}
+
+.card-body li{
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color:#606060;
+}
+
+.card-body li img{
+  width: 180px;
+  height: 180px;
+}
+
+.card-body li a{
+
+  color:lightgreen!important;
+  font-weight: bold;
+  margin: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #50d1c0;
+  border-radius: 100px;
+  margin: 0 2px;
+  padding: 05px 15px;
+}
+.card-body li a:hover{
+  color: #fff!important;
+  background: lightgreen;
+  text-decoration: none;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-footer{
+  text-transform: uppercase;
+  font-weight: bold;
+  background: white!important;
+  padding: 20px 0px!important;
+}
+
+.card-footer a{
+  border: 1px solid #50d1c0;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 12px 35px;
+  outline: none;
+  color:#50d1c0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.card-footer a:hover{
+  color: #fff;
+  background: #50d1c0;
+  text-decoration: none;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card:hover{
+  /*transform: translateY(-20px);*/
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card-header, .card:hover .cash{
+  color: #50d1c0;
+}
+
+/*.card-sec{
+  transform: translateY(-20px);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}*/
+
+
+
+/***********footer start***********/
+
+
+.footer{
+  width: 100%;
+  height: auto;
+  padding: 70px 0 20px 0;
+  background:#00abff;
+  position: relative;
+}
+.footer p{
+  color:#fff;
+}
+.footer li a{
+  font-size:0.9rem;
+  line-height:1.6;
+  font-weight: 400;
+  color:#fff;
+  text-transform: capitalize;
+}
+.footer h3{
+  text-transform: uppercase;
+  color:#fff;
+  margin-bottom:15px;
+  font-size:1.2rem!important;
+  font-weight: bold;
+  text-shadow:0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.input-groups-text{
+  color: #fff!important;
+  background:#5bc0de!important;
+  border-radius: 0px 100px 100px 0px!important;
+  min-width: 100px;
+  min-height: 45px;
+  border: none;
+}
+#scbtn{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  border: none;
+  color: white;
+  padding: 10px;
+  background: #1af70a;
+  border-radius: 10px;
+}
+#scbtn:hover{
+  background:#27bf19;
+}
+
+.social{
+  height: auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.social a{
+  height: 100px;
+  width: 100px;
+  background-color: #f5f6fa;
+  border-radius:50px;
+  margin:15px;
+  text-align: center;
+  line-height: 120px;
+  margin: 10px;
+  box-shadow: 1px 4px 2px 2px #dcdde1;
+
+}
+.social a i{
+  transition: all 0.3s linear;
+}
+.social a:hover i{
+  transform: scale(1.4);
+}
+  .fa-twitter{
+    color:#1DA1F2;
+  }
+  .fa-facebook{
+    color:blue;
+  }
+  .fa-youtube{
+    color: #e84118;
+  }
+  .fa-instagram{
+    color: #e84393;
+  }
+  .fa-linkedin{
+    color:#0097e6;
+  }
+
+/*****************Footer End*************/
+
+</style>
+
+</head>
+<body>
+
+<div class="header" id="topheader">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container text-uppercase p-2">
+  <a class="navbar-brand font-weight-bold text-white" href="#">Junaidtechnical</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto text-uppercase">
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#service">services</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">price</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#footer">about us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">contact us</a>
+      </li>
+
+    </ul>
+  </div>
+  </div>
+</nav>
+
+  <section class="header-section">
+      <div class="center-div">
+    <h1 class="font-weight-bold">Laptops And Accessories Wholesale Suppliers</h1>
+    <p>World's Largest Brand Marketplace. Choose Your Favorite Product and Order Now!</p>
+    <div class="header-buttons">
+    <a href="#footer">About us</a>
+    <a href="#contact">contact us</a>
+      </div>
+      </div>
+  </section>
+ </div>
+
+
+<!--*****************Laptop*************-->
+<section class="pric" id="price">
+  <div class="container headings text-center">
+    <h1 class="text-center font-weight-bold text-red">Our laptop Collections</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card text-center">
+        <div class="card-header">HP</div>
+        <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40</span>/price of 1 Piece</li>
+          <li>Cheap Mini PC I3 I5 I7 5th Gen</li>
+          <li>Desktop 5015U 2.1GHz 8GB DDR3</li>
+          <li>128GB SSD Dual Core Mini PC</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-12 card-sec">
+      <div class="card text-center">
+        <div class="card-header">Lenovo</div>
+        <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40 </span>/price of Piece</li>
+          <li>Laptop With Core I3/I5/I7</li>
+          <li>Wholesales OEM 1920x1280 SSD</li>
+          <li>4/8GB 128/256GB 13.3 Inch Laptop</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card text-center">
+        <div class="card-header">Dell</div>
+         <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40 </span>/price of Piece</li>
+          <li>Mini PC I3 I5 I7 5th Gen</li>
+          <li>Desktop 5015U 2.1GHz 8GB DDR3</li>
+          <li>128GB SSD Dual Core Mini PC</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+
+
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card text-center">
+        <div class="card-header">HP</div>
+        <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40</span>/price of 1 Piece</li>
+          <li>Cheap Mini PC I3 I5 I7 5th Gen</li>
+          <li>Desktop 5015U 2.1GHz 8GB DDR3</li>
+          <li>128GB SSD Dual Core Mini PC</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-12 card-sec">
+      <div class="card text-center">
+        <div class="card-header">Lenovo</div>
+        <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40 </span>/price of Piece</li>
+          <li>Laptop With Core I3/I5/I7</li>
+          <li>Wholesales OEM 1920x1280 SSD</li>
+          <li>4/8GB 128/256GB 13.3 Inch Laptop</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card text-center">
+        <div class="card-header">Dell</div>
+         <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40 </span>/price of Piece</li>
+          <li>Mini PC I3 I5 I7 5th Gen</li>
+          <li>Desktop 5015U 2.1GHz 8GB DDR3</li>
+          <li>128GB SSD Dual Core Mini PC</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+
+
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card text-center">
+        <div class="card-header">HP</div>
+        <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40</span>/price of 1 Piece</li>
+          <li>Cheap Mini PC I3 I5 I7 5th Gen</li>
+          <li>Desktop 5015U 2.1GHz 8GB DDR3</li>
+          <li>128GB SSD Dual Core Mini PC</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-12 card-sec">
+      <div class="card text-center">
+        <div class="card-header">Lenovo</div>
+        <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40 </span>/price of Piece</li>
+          <li>Laptop With Core I3/I5/I7</li>
+          <li>Wholesales OEM 1920x1280 SSD</li>
+          <li>4/8GB 128/256GB 13.3 Inch Laptop</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card text-center">
+        <div class="card-header">Dell</div>
+         <div class="card-body">
+          <li><img src="imgs/lap.png"></li>
+          <li>$<span class="cash">266.40 </span>/price of Piece</li>
+          <li>Mini PC I3 I5 I7 5th Gen</li>
+          <li>Desktop 5015U 2.1GHz 8GB DDR3</li>
+          <li>128GB SSD Dual Core Mini PC</li>
+          <li>Customer Support 24/7</li>
+        </div>
+        <div class="card-footer">
+          <a href="#">Purchase</a>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-----------------footer---------------->
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12 footer-div">
+        <div>
+          <h3>About Javedtechnical</h3>
+          <p>The world has become so fast paced that people don't want to Stand by reading a page of information to be they would much rather look at a presentation and understand the massage.</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-4 col-12 footer-div text-center">
+        <div>
+          <h3>Navigation links</h3>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">Price</a></li>
+          <li><a href="#">about</a></li>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-12 col-12 footer-div">
+        <div>
+          <h3>news letter</h3>
+          <p>For business professionals caught between high OEM price and mediocre print and graphic output.</p>
+
+          <div class="container mainnews">
+                  <div class="row">
+                    <div class="col-lg-12 col-12">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control news-input" placeholder="Your Email">
+                        <div class="input-group-append">
+                          <button type="submit" class="input-groups-text">Subscribe</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+
+
+    </div>
+
+<div class="social">
+  <a href="https://web.facebook.com/profile.php?id=100006121395494" target="blank">
+    <i class="fa fa-3x fa-facebook"></i>
+  </a>
+
+  <a href="">
+    <i class="fa fa-3x fa-twitter"></i>
+  </a>
+
+  <a href="">
+    <i class="fa fa-3x fa-youtube"></i>
+  </a>
+
+  <a href="">
+    <i class="fa fa-3x fa-instagram"></i>
+  </a>
+
+  <a href="">
+    <i class="fa fa-3x fa-linkedin"></i>
+  </a>
+
+</div>
+
+
+
+
+        <div class="mt-5 text-center">
+          <p class="text-uppercase">
+            <!--<marquee scrollamount="10" direction="left" behavior="" onmouseover="stop()" onmouseout="start()"></marquee>-->
+
+            Copyright ©2021 ®AlRight Reseved | This Template made with love by Javedtechnical
+          </p>
+        </div>
+        <div class="scrolltop float-right">
+          <i class="fa fa-arrow-up" onclick="topFunction()" id="scbtn"></i>
+        </div>
+  </div>
+
+ </footer>
+ <!------------footer end---------->
+
+
+
+
+</body>
+</html>
